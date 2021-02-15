@@ -98,7 +98,7 @@ export default {
             axios
             .get('https://covid19.mathdro.id/api')
             .then(response => {
-                this.country = response.data.confirmed.value;
+                this.covid = response.data.confirmed.value;
                 this.date = response.data.lastUpdate;
             });
         }
