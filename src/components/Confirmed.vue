@@ -98,7 +98,7 @@ export default {
             axios
             .get('https://covid19.mathdro.id/api')
             .then(response => {
-                this.covid = response.data.deaths.value;
+                this.country = response.data.confirmed.value;
                 this.date = response.data.lastUpdate;
             });
         }
@@ -108,7 +108,7 @@ export default {
             axios
             .get('https://covid19.mathdro.id/api/countries/' + this.selected)
             .then((response => {
-                this.countryCovid = response.data.deaths.value
+                this.countryCovid = response.data.confirmed.value
                 this.countryDate = response.data.lastUpdate
             }));
         }
